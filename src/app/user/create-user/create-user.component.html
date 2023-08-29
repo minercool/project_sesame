@@ -1,0 +1,25 @@
+<br><button type="button" class="btn btn-outline-primary" [routerLink]="['/']">Go back home</button>
+
+<div class="container-md">
+    <form #form="ngForm" (submit)="addUser(form)" ngNativeValidate>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter name" name="name" onkeydown="return /[a-zA-Z ]/i.test(event.key)" ngModel required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
+          </div><br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" name="email" ngModel required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div><br>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="8" ngModel required>
+          </div><br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Birthday</label>
+          <input type="date" class="form-control" placeholder="Birthday" name="birth_day" ngModel required>
+        </div><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
